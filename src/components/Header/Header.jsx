@@ -1,13 +1,29 @@
 import style from "./style.module.css";
 import logo from "../../assets/Images/logo.svg";
+import { useState } from "react";
+
 
 export default function Header() {
+
+  const [isActive, setIsActive] = useState(false);
+
+  
+  const handleHamburgerClick = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <div className={style.navbar}>
       <div className={style.navLogo}>
+      <div className={style.hamburger} onClick={handleHamburgerClick}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
         <img src={logo} alt="logo" />
       </div>
-      <ul className={style.navMenu}>
+
+      <ul className={`${style.navMenu} ${isActive ? style.active : ""}`}>
         <li>Catalog</li>
         <li>How it works</li>
         <li>Pricing</li>

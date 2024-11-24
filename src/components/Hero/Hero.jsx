@@ -27,7 +27,7 @@ export default function Hero(props) {
           <div id={style.heroBins}>
             <div className={style.heroBin}>
               <h1>Create and sell custom products</h1>
-              <div>
+              <div className={style.binifitsDiv}>
                 <div className={style.binifits}>
                   <img src={checkmark} alt="checkmark" />
                   <p>100% Free to use</p>
