@@ -28,8 +28,8 @@
 .midFooter{
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: none;
+    grid-template-columns: repeat(4, 1fr);
 }
 .footerLinks{
     margin: 0;
@@ -73,4 +73,9 @@
     height: 1px;
     background: #d9d9d9;
 }
+@media only screen and (max-width:1200px){
+    .midFooter{
+grid-template-columns: 1fr 1fr;
+    }
 
+}
